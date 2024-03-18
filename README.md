@@ -4,7 +4,7 @@ Code used by [IguanaTex](https://github.com/Jonathan-LeRoux/IguanaTex/) to extra
 
 The end user should not need to fiddle with this code, but we make it public for reference.
 
-This repository provides the Windows code. The Mac version is available on the sister repository https://github.com/LaTeXiT-metadata/LaTeXiT-metadata-MacOS.
+This repository provides the Windows code. The Mac version is available on the sister repository [LaTeXiT-metadata-MacOS](https://github.com/LaTeXiT-metadata/LaTeXiT-metadata-MacOS).
 
 # Acknowledgement
 LaTeXiT-metadata was kindly prepared by Pierre Chatelier, LaTeXiT's author, to meet IguanaTex's requirements. Many thanks to him!
