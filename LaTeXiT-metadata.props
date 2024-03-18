@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="UserMacros">
+    <ARCHITECTURE Condition="'$(Platform)' == 'Win32'">x86</ARCHITECTURE>
+    <ARCHITECTURE Condition="'$(Platform)' == 'x64'">x64</ARCHITECTURE>
+    <ARCHITECTURE2 Condition="'$(Platform)' == 'Win32'">x86</ARCHITECTURE2>
+    <ARCHITECTURE2 Condition="'$(Platform)' == 'x64'">x86_64</ARCHITECTURE2>
+    <ARCHITECTURE3 Condition="'$(Platform)' == 'Win32'">win32</ARCHITECTURE3>
+    <ARCHITECTURE3 Condition="'$(Platform)' == 'x64'">win64</ARCHITECTURE3>
+    <ARCHITECTURE4 Condition="'$(Platform)' == 'Win32'">32-bit</ARCHITECTURE4>
+    <ARCHITECTURE4 Condition="'$(Platform)' == 'x64'">64-bit</ARCHITECTURE4>
+    <ARCHITECTURE5 Condition="'$(Platform)' == 'Win32'">32</ARCHITECTURE5>
+    <ARCHITECTURE5 Condition="'$(Platform)' == 'x64'">64</ARCHITECTURE5>
+    <ARCHITECTURE6 Condition="'$(Platform)' == 'Win32'">ia32</ARCHITECTURE6>
+    <ARCHITECTURE6 Condition="'$(Platform)' == 'x64'">intel64</ARCHITECTURE6>
+    <ARCHITECTURE32OREMPTY Condition="'$(Platform)' == 'Win32'">win32</ARCHITECTURE32OREMPTY>
+    <ARCHITECTURE32OREMPTY Condition="'$(Platform)' == 'x64'"></ARCHITECTURE32OREMPTY>
+    <ARCHITECTURE64OREMPTY Condition="'$(Platform)' == 'Win32'"></ARCHITECTURE64OREMPTY>
+    <ARCHITECTURE64OREMPTY Condition="'$(Platform)' == 'x64'">64</ARCHITECTURE64OREMPTY>
+    <ARCHITECTURE64OREMPTY2 Condition="'$(Platform)' == 'Win32'"></ARCHITECTURE64OREMPTY2>
+    <ARCHITECTURE64OREMPTY2 Condition="'$(Platform)' == 'x64'">amd64</ARCHITECTURE64OREMPTY2>
+    <ARCHITECTURE64OREMPTY3 Condition="'$(Platform)' == 'Win32'"></ARCHITECTURE64OREMPTY3>
+    <ARCHITECTURE64OREMPTY3 Condition="'$(Platform)' == 'x64'">x64</ARCHITECTURE64OREMPTY3>
+    <ARCHITECTURE64_SUFFIX Condition="'$(Platform)' == 'Win32'"></ARCHITECTURE64_SUFFIX>
+    <ARCHITECTURE64_SUFFIX Condition="'$(Platform)' == 'x64'">-x64</ARCHITECTURE64_SUFFIX>
+    <ARCHITECTURE64_SUFFIX2 Condition="'$(Platform)' == 'Win32'"></ARCHITECTURE64_SUFFIX2>
+    <ARCHITECTURE64_SUFFIX2 Condition="'$(Platform)' == 'x64'">_x64</ARCHITECTURE64_SUFFIX2>
+    <VSFRIENDLYVERSION Condition="'$(PlatformToolset)' == 'v100'">vs2010</VSFRIENDLYVERSION>
+    <VSFRIENDLYVERSION Condition="'$(PlatformToolset)' == 'v120'">vs2013</VSFRIENDLYVERSION>
+    <VSFRIENDLYVERSION Condition="'$(PlatformToolset)' == 'v140'">vs2015</VSFRIENDLYVERSION>
+    <VSFRIENDLYVERSION Condition="'$(PlatformToolset)' == 'v140_xp'">vs2015</VSFRIENDLYVERSION>
+    <VSFRIENDLYVERSION Condition="'$(PlatformToolset)' == 'v141'">vs2017</VSFRIENDLYVERSION>
+    <VSFRIENDLYVERSION Condition="'$(PlatformToolset)' == 'v142'">vs2019</VSFRIENDLYVERSION>
+    <DEBUG_SUFFIX Condition="'$(Configuration)' == 'Debug'">d</DEBUG_SUFFIX>
+    <DEBUG_SUFFIX Condition="'$(Configuration)' == 'Release'"></DEBUG_SUFFIX>
+    <DEBUG_SUFFIX2 Condition="'$(Configuration)' == 'Debug'">_debug</DEBUG_SUFFIX2>
+    <DEBUG_SUFFIX2 Condition="'$(Configuration)' == 'Release'"></DEBUG_SUFFIX2>
+    <DEBUG_SUFFIX3 Condition="'$(Configuration)' == 'Debug'">_d</DEBUG_SUFFIX3>
+    <DEBUG_SUFFIX3 Condition="'$(Configuration)' == 'Release'"></DEBUG_SUFFIX3>
+    <DEPENDENCIES_PATH>../dependencies</DEPENDENCIES_PATH>
+    <PODOFO>$(DEPENDENCIES_PATH)\podofo</PODOFO>
+    <ZLIB>$(DEPENDENCIES_PATH)\zlib</ZLIB>
+  </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <_PropertySheetDisplayName>Libraries properties</_PropertySheetDisplayName>
+  </PropertyGroup>
+  <ItemGroup>
+    <BuildMacro Include="ARCHITECTURE">
+      <Value>$(ARCHITECTURE)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ARCHITECTURE2">
+      <Value>$(ARCHITECTURE2)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ARCHITECTURE3">
+      <Value>$(ARCHITECTURE3)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ARCHITECTURE4">
+      <Value>$(ARCHITECTURE4)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ARCHITECTURE5">
+      <Value>$(ARCHITECTURE5)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ARCHITECTURE6">
+      <Value>$(ARCHITECTURE6)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ARCHITECTURE32OREMPTY">
+      <Value>$(ARCHITECTURE32OREMPTY)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ARCHITECTURE64OREMPTY">
+      <Value>$(ARCHITECTURE64OREMPTY)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ARCHITECTURE64OREMPTY2">
+      <Value>$(ARCHITECTURE64OREMPTY2)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ARCHITECTURE64OREMPTY3">
+      <Value>$(ARCHITECTURE64OREMPTY3)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ARCHITECTURE64_SUFFIX">
+      <Value>$(ARCHITECTURE64_SUFFIX)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ARCHITECTURE64_SUFFIX2">
+      <Value>$(ARCHITECTURE64_SUFFIX2)</Value>
+    </BuildMacro>
+    <BuildMacro Include="VSFRIENDLYVERSION">
+      <Value>$(VSFRIENDLYVERSION)</Value>
+    </BuildMacro>
+    <BuildMacro Include="DEBUG_SUFFIX">
+      <Value>$(DEBUG_SUFFIX)</Value>
+    </BuildMacro>
+    <BuildMacro Include="DEBUG_SUFFIX2">
+      <Value>$(DEBUG_SUFFIX2)</Value>
+    </BuildMacro>
+    <BuildMacro Include="DEBUG_SUFFIX3">
+      <Value>$(DEBUG_SUFFIX3)</Value>
+    </BuildMacro>
+    <BuildMacro Include="DEPENDENCIES_PATH">
+      <Value>$(DEPENDENCIES_PATH)</Value>
+    </BuildMacro>
+    <BuildMacro Include="PODOFO">
+      <Value>$(PODOFO)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ZLIB">
+      <Value>$(ZLIB)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
